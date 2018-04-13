@@ -48,5 +48,5 @@ optional arguments:
 * [ ] redis sentinel cluster support
 * [x] etcd v2 support
 * [ ] etcd v3 support
-* [ ] consul
+* [x] consul
 * [ ] support batch mode
