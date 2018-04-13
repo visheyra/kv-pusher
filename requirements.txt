@@ -1,3 +1,3 @@
-requests
-uritools
-redis
+requests==2.18.4
+uritools==2.1.0
+redis==2.10.6
