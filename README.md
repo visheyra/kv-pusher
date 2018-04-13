@@ -50,3 +50,4 @@ optional arguments:
 * [ ] etcd v3 support
 * [x] consul
 * [ ] support batch mode
+* [ ] get status of the KV (cluster and single node implementation)
