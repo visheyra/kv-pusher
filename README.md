@@ -6,6 +6,7 @@ Simple python utility that allows you to easily write / read / delete data in di
 
 * etcd v2
 * redis
+* Consul
 
 ## How to use
 
@@ -14,7 +15,7 @@ The helper explains itself pretty well.
 ```
 [visheyra@linuxbox]$ python app.py -h
 usage: app.py [-h] [--verbose] --endpoint ENDPOINT --port PORT --store
-              {etcdv2,redis} --command {read,write,delete} --key KEY
+              {etcdv2,redis,consul} --command {read,write,delete} --key KEY
               [--value VALUE]
 
 interract with different K/Vs
@@ -48,6 +49,6 @@ optional arguments:
 * [ ] redis sentinel cluster support
 * [x] etcd v2 support
 * [ ] etcd v3 support
-* [ ] consul
+* [x] consul
 * [ ] support batch mode
 * [ ] get status of the KV (cluster and single node implementation)
