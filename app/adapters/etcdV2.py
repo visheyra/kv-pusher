@@ -21,7 +21,7 @@ class EtcdV2:
         r = self.session.put(self._path_in_url(key), data={ 'value': value })
         if verbosity:
             print(json.dumps(r.json(), indent=2))
-        if r.status_code != 200:
+        if r.status_code / 100 != 2:
             raise RuntimeError('Did not succeed')
         elif verbosity:
             print('succeeds')
@@ -30,7 +30,7 @@ class EtcdV2:
         r = self.session.delete(self._path_in_url(key))
         if verbosity:
             print(json.dumps(r.json(), indent=2))
-        if r.status_code != 200:
+        if r.status_code / 100 != 2:
             raise RuntimeError('Did not succeed')
         elif verbosity:
             print('succeeds')
@@ -42,7 +42,7 @@ class EtcdV2:
         r = self.session.get(self._path_in_url(key))
         if verbosity:
             print(json.dumps(r.json(), indent=2))            
-        if r.status_code != 200:
+        if r.status_code / 100 != 2:
             raise RuntimeError('Did not succeeds')
         elif verbosity:
             print('suceeds')
